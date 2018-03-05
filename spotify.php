@@ -1,7 +1,5 @@
 <?php
-	
 	require './vendor/autoload.php';
-	require './src/functions.php';
     require './config.php';
 
     $api = new SpotifyWebAPI\SpotifyWebAPI();

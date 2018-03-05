@@ -1,4 +1,5 @@
 class Spotify {
+
     constructor(accessToken) {
         this.currData = [];
         this.accessToken = accessToken;
@@ -67,7 +68,7 @@ class Spotify {
             return true;
 
         if(context) {
-            _.bind(this.getPlaylistDataFromContext, this, context);
+            this.getPlaylistDataFromContext(context);
             return true;
         }
 
@@ -94,3 +95,6 @@ class Spotify {
         }, 'json');
     }
 }
+
+var spotiSaver = new Spotify(spotifyApi.token);
+spotiSaver.requestNowPlaying();

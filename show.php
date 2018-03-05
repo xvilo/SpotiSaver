@@ -31,9 +31,25 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
             integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
             crossorigin="anonymous"></script>
-    <script src="assets/js/app.js"></script>
     <script>
-        var SpotifyApi = new Spotify('<?php echo $_GET['token'] ?>');
-        SpotifyApi.requestNowPlaying();
+        var supportsES6 = function() {
+            try {
+                new Function("(a = 0) => a");
+                return true;
+            }
+            catch (err) {
+                return false;
+            }
+        }();
+
+        console.log("using: ", supportsES6 ? 'ES6' : 'ES5');
+
+        var script = document.createElement("script");
+        script.src = supportsES6 ? 'assets/js/app.js' : 'assets/js/app-es5.js';
+        document.head.appendChild(script);
+
+        window.spotifyApi = {};
+        spotifyApi.token = '<?php echo $_GET['token'] ?>';
+        spotifyApi.hideTitle = <?php echo isset($_GET['hideTitle']) ? 'true' : 'false' ?>;
     </script>
 </html>
