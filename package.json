@@ -1,0 +1,27 @@
+{
+  "name": "spotisaver",
+  "version": "1.0.0",
+  "description": "Screensaver for spotify",
+  "main": "index.js",
+  "dependencies": {
+    "gulp-babel": "^7.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "gulp-babel": "^7.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xvilo/SpotiSaver.git"
+  },
+  "author": "Sem Schilder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xvilo/SpotiSaver/issues"
+  },
+  "homepage": "https://github.com/xvilo/SpotiSaver#readme"
+}

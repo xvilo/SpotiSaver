@@ -45,7 +45,7 @@
         console.log("using: ", supportsES6 ? 'ES6' : 'ES5');
 
         var script = document.createElement("script");
-        script.src = supportsES6 ? 'assets/js/app.js' : 'assets/js/app-es5.js';
+        script.src = supportsES6 ? 'assets/js/app.js' : 'assets/js/es5/app.js';
         document.head.appendChild(script);
 
         window.spotifyApi = {};
